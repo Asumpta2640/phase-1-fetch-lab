@@ -19,10 +19,12 @@ function fetchBooks() {
 
 function renderBooks(books) {
   const main = document.querySelector('main');
+
   if(!main){
     console.error("No <main> element found in DOM.");
     return;
   }
+  
   books.forEach(book => {
     const h2 = document.createElement('h2');
     h2.innerHTML = book.name;
